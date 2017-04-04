@@ -39,8 +39,19 @@ class IngredientList
   end
 
   def cost_per_measure()
-    cost_per_ml = ingredients.price_per_ltr / 1000
+    cost_per_ml = ingredients().price_per_ltr / 1000
     return cost_per_ml * @measure
+  end
+
+  def quantity
+    quantity = ingredients().quantity
+    if quantity >= 10
+      return "High Stock Levels"
+    elsif quantity >= 3
+      return "Moderate Stock Levels"
+    else
+      return "Low Stock Levels"
+    end
   end
 
 
