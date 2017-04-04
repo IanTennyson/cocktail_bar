@@ -3,10 +3,12 @@
   <input id="name" type="text" name="name" value="<%= @ingredient.name %>">
 
   <br/>
+  <br/>
 
   <label for="price_per_ltr">Price Per Ltr:</label>
   <input id="price_per_ltr" type="number" name="price_per_ltr" value="<%= @ingredient.price_per_ltr %>"/>
 
+  <br/>
   <br/>
 
   <label for="is_alcoholic">Is the Ingredient Alcoholic?</label>
@@ -16,11 +18,20 @@
   </select>
 
   <br/>
+  <br/>
 
   <label for="quantity">How many liters would you like to order?</label>
   <input id="quantity" type="number" name="quantity" value="<%= @ingredient.quantity %>" />
 
   <br/>
+  <br/>
+
+  <label for="mark_up">What is the mark up on this product?</label>
+  <input id="mark_up" type="number" name="mark_up" value="<%= @ingredient.ingredient_mark_up %>">
+
+  <br/>
+  <br/>
+
 
   <input type="submit" value="Update Stock" />
 

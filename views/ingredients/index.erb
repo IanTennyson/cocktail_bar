@@ -10,6 +10,8 @@
     <th></th>
     <th>Cost Price</th>
     <th></th>
+    <th>Mark Up</th>
+    <th></th>
     <th>Sale Price</th>
     <th></th>
     <th>Profit</th>
@@ -26,6 +28,8 @@
       <td><%= alc_ing.quantity_level %></td>
       <td>|</td>
       <td>£<%= alc_ing.cost_price %></td>
+      <td>|</td>
+      <td>x<%= alc_ing.ingredient_mark_up %></td>
       <td>|</td>
       <td>£<%= alc_ing.sale_price %></td>
       <td>|</td>
@@ -66,6 +70,8 @@
     <th></th>
     <th>Cost Price</th>
     <th></th>
+    <th>Mark Up</th>
+    <th></th>
     <th>Sale Price</th>
     <th></th>
     <th>Profit</th>
@@ -77,10 +83,11 @@
       <td>|</td>
       <td>£<%= non_alc_ing.price_per_ltr %></td>
       <td>|</td>
-     
       <td><%= non_alc_ing.quantity_level %></td>
       <td>|</td>
       <td>£<%= non_alc_ing.cost_price %></td>
+      <td>|</td>
+      <td>x<%= non_alc_ing.ingredient_mark_up %></td>
       <td>|</td>
       <td>£<%= non_alc_ing.sale_price %></td>
       <td>|</td>
