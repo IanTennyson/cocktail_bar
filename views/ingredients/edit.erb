@@ -1,0 +1,27 @@
+<form method="post" action="/ingredients/<%= @ingredient.id %>">
+  <label for="name">Ingredient Name:</label>
+  <input id="name" type="text" name="name" value="<%= @ingredient.name %>">
+
+  <br/>
+
+  <label for="price_per_ltr">Price Per Ltr:</label>
+  <input id="price_per_ltr" type="number" name="price_per_ltr" value="<%= @ingredient.price_per_ltr %>"/>
+
+  <br/>
+
+  <label for="is_alcoholic">Is the Ingredient Alcoholic?</label>
+  <select id="is_alcoholic" name="is_alcoholic">
+    <option value="t"<%="selected" if @ingredient.is_alcoholic == "Yes" %>>Yes</option>
+    <option value="f"<%="selected" if @ingredient.is_alcoholic == "No" %>>No</option>
+  </select>
+
+  <br/>
+
+  <label for="quantity">How many liters would you like to order?</label>
+  <input id="quantity" type="number" name="quantity" value="<%= @ingredient.quantity %>" />
+
+  <br/>
+
+  <input type="submit" value="Update Stock" />
+
+</form>

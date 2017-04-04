@@ -32,6 +32,12 @@
       <td>£<%= alc_ing.profit %></td>
       <td>|</td>
       <td>
+      <form method="get" action="/ingredients/<%=alc_ing.id%>/edit"> 
+        <input type="submit" value="Edit Stock"/>
+      </form>
+      </td>
+      <td>|</td>
+      <td>
         <form action="/ingredients/<%= alc_ing.id %>/delete" method="POST">
           <input class="bth btn--danger" type="submit" value="delete" />
         </form>
@@ -81,11 +87,22 @@
       <td>£<%= non_alc_ing.profit %></td>
       <td>|</td>
       <td>
+      <form method="get" action="/ingredients/<%=non_alc_ing.id%>/edit"> 
+        <input type="submit" value="Edit Stock"/>
+      </form>
+      </td>
+      <td>|</td>
+      <td>
         <form action="/ingredients/<%= non_alc_ing.id %>/delete" method="POST">
           <input class="bth btn--danger" type="submit" value="delete" />
         </form>
       </td>
     </tr>    
+
+
+
+
+
 
   <% end %>
 </table>
