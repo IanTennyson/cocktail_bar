@@ -1,0 +1,41 @@
+<h1>What would you like to order?</h1>
+
+<form action="/ingredients" method="post">
+
+<label for="name">Ingredient Name: </label>
+<input type="name" type="text" name="name">
+
+<br/>
+<br/>
+
+<label for="price_per_ltr">Price Per Ltr: </label>
+<input type="price_per_ltr" type="number" name="price_per_ltr">
+
+<br/>
+<br/>
+
+<label for="is_alcoholic">Is the Ingredient Alcoholic?</label>
+<select id="is_alcoholic" name="is_alcoholic">
+<option value="t">Yes</option>
+<option value="f">No</option>
+</select>
+
+<br/>
+<br/>
+
+<label for="quantity">How many liters would you like to order?</label>
+<input id="quantity" type="number" name="quantity">
+
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+<input class="btn btn--action" type='submit' value="Order">
+</form>
