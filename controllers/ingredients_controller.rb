@@ -9,6 +9,10 @@ get '/ingredients' do
   @alc_ingredients = Ingredient.all_alcoholic()
   @non_alc_ingredients = Ingredient.all_non_alcoholic()
   @total_cost_price = Ingredient.total_stock_cost_price()
-  @total_profit = Ingredient.total_potential_profit
+  @total_profit = Ingredient.total_potential_profit()
   erb( :"ingredients/index" )
+end
+
+get '/ingredients/new' do
+  return "Hello World"
 end

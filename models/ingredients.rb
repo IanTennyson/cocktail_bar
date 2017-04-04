@@ -89,6 +89,17 @@ class Ingredient
     Ingredient.map_items(sql)
   end
 
+  def quantity_level
+    quantity_no = quantity()
+    if quantity_no >= 10
+      return "High Stock Levels"
+    elsif quantity_no >= 3
+      return "Moderate Stock Levels"
+    else
+      return "Low Stock Levels"
+    end
+  end
+
 
 
 
