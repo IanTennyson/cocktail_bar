@@ -1,0 +1,24 @@
+<% for cocktail in @cocktails %>
+<!--  I'm in the loop and dealing with each individual cocktail -->
+  <%= cocktail.name  %>
+  <hr>
+  <br/>
+<!-- for every ingredient that returns when I call cocktail.ingredient -->
+  <% for cocktail_ingredient in cocktail.ingredients() %>
+  <!-- give me the name, here the .ingredients is refering to the ing_list -->
+    <p><%= cocktail_ingredient.ingredients().name  %>:</p>
+    <!-- give me the measure -->
+    <p><%= cocktail_ingredient.measure  %>ml</p>
+    <br/>
+    <br/>
+  <% end %>
+  <%= cocktail.prep_description  %>
+<hr/>
+  <% for cocktail_ingredient in cocktail.ingredients() %>
+    <p>Cost Price:</p>
+    <p><%= cocktail_ingredient.ingredients().price_per_ltr  %></p>
+
+
+   
+  <% end %>
+<% end %>
