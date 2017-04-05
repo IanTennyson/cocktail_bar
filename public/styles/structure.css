@@ -13,18 +13,19 @@ h1 {
 }
 
 .grid {
-    border: solid 1px dodgerblue;
+    background-color: grey;
+    
+    flex-direction: row;
   }
 
 .grid-row {
     display: flex;
-    flex-direction: column;
+    
   }
 
 .grid-cell {
     text-align: center;
     flex: 1;
     padding: 10px;
-    border: solid 1px salmon;
-    flex-direction: row;
+    border: solid black 1px;
   }

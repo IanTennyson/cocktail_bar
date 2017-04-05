@@ -24,10 +24,16 @@ post '/ingredients' do
   redirect to ("/ingredients")
 end
 
+
+
+
 post '/ingredients/:id/delete' do
   Ingredient.delete(params[:id])
   redirect to("/ingredients")
 end
+
+
+
 
 get '/ingredients/:id/edit' do
   @ingredient = Ingredient.find(params[:id])
@@ -37,6 +43,6 @@ end
 post '/ingredients/:id' do 
   @ingredient = Ingredient.new(params)
   @ingredient.update
-  
+
   redirect to("/ingredients")
 end
