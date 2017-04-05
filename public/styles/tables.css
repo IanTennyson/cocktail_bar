@@ -18,13 +18,16 @@ table {
 .table1 {
   width: 100%;
   background-color: cornflowerblue;
+  text-align: center
 }
 
 .table2 {
   width: 100%;
   background-color: slategrey;
+  text-align: center
 }
 
 .table3 {
   background-color: cornflowerblue;
+  text-align: center
 }

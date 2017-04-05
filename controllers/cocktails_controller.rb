@@ -7,8 +7,9 @@ require_relative( '../models/ingredients_list.rb' )
 
 
 get '/cocktails' do
-  @cocktails = Cocktail.all
-  @ingredient_list = IngredientList.all
+  @cocktails = Cocktail.all()
+  @ingredient_list = IngredientList.all()
 
   erb( :"cocktails/index" )
 end
+

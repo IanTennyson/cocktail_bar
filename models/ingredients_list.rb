@@ -43,7 +43,16 @@ class IngredientList
     return cost_per_ml * @measure
   end
 
-
+  def quantity
+    quantity = ingredients().quantity
+    if quantity >= 10
+      return "High Stock Levels"
+    elsif quantity >= 3
+      return "Moderate Stock Levels"
+    else
+      return "Low Stock Levels"
+    end
+  end
 
 
 

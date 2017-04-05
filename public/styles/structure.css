@@ -1,0 +1,15 @@
+
+.header {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  border: solid 1px red;
+}
+
+h1 {
+  font-family: retrograph;
+  color: white;
+  text-align: center;
+  font-size: 30px
+
+}

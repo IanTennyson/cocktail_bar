@@ -11,7 +11,8 @@ CREATE TABLE ingredients (
   price_per_ltr DECIMAL,
   cost_price INT4,
   sale_price INT4,
-  profit INT4
+  profit INT4,
+  mark_up INT4
 );
 
 CREATE TABLE cocktails (

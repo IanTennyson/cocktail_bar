@@ -14,10 +14,15 @@ class Ingredient
     @cost_price = options['cost_price'].to_f
     @sale_price = options['sale_price'].to_f
     @profit = options['profit'].to_f
+    if (options['mark_up'].to_i != 0)
+      @mark_up = options['mark_up'].to_i 
+    else
+      @mark_up = 3
+    end
   end
 
   def save()
-    sql = "INSERT INTO ingredients (name, price_per_ltr, is_alcoholic, quantity, cost_price, sale_price, profit) VALUES ( '#{@name}', '#{@price_per_ltr}', #{@is_alcoholic}, #{@quantity}, #{cost_price}, #{sale_price}, #{profit} ) RETURNING *"
+    sql = "INSERT INTO ingredients (name, price_per_ltr, is_alcoholic, quantity, cost_price, sale_price, profit, mark_up) VALUES ( '#{@name}', '#{@price_per_ltr}', '#{@is_alcoholic}', #{@quantity}, #{cost_price}, #{sale_price}, #{profit}, #{@mark_up} ) RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
     ingredient_cost_price()
@@ -26,8 +31,11 @@ class Ingredient
   end
 
   def update()
-    sql = "UPDATE ingredients SET (name, price, is_alcoholic, quantity, cost_price, sale_price, profit) = ( '#{@name}', '#{@price_per_ltr}', #{@is_alcoholic}, #{@quantity}, #{cost_price}, #{sale_price}, #{profit}) WHERE id = #{@id}"
+    sql = "UPDATE ingredients SET (name, price_per_ltr, is_alcoholic, quantity, cost_price, sale_price, profit, mark_up) = ( '#{@name}', '#{@price_per_ltr}', '#{@is_alcoholic}', #{@quantity}, #{cost_price}, #{sale_price}, #{profit}, #{@mark_up}) WHERE id = #{@id}"
     SqlRunner.run(sql)
+    ingredient_cost_price()
+    ingredient_sale_price()
+    ingredient_profit()
   end
 
   def delete
@@ -56,10 +64,19 @@ class Ingredient
     SqlRunner.run(sql)
   end
 
+  def ingredient_mark_up()
+    sql = "SELECT mark_up FROM ingredients WHERE id = #{@id}"
+    SqlRunner.run(sql).first.values().pop.to_i
+  end
+
+
   def ingredient_sale_price()
-    sale_price = ingredient_cost_price() * 2.5
-    update_sale_price(sale_price)
-    return sale_price
+    sale_price = ingredient_cost_price() * ingredient_mark_up()
+    one_percent = sale_price / 100
+    twenty_percent = one_percent * 20
+    sale_price_inc_vat = sale_price + twenty_percent
+    update_sale_price(sale_price_inc_vat)
+    return sale_price_inc_vat
   end
 
   def update_sale_price(new_sale_price)
@@ -67,8 +84,13 @@ class Ingredient
     SqlRunner.run(sql)
   end
 
+  def sale_inc_vat()
+
+  end
+
   def ingredient_profit()
-    profit = ingredient_sale_price - ingredient_cost_price() 
+    profit = ingredient_sale_price - ingredient_cost_price()
+    profit_minus_vat =  
     update_profit(profit)
     return profit
   end
@@ -175,6 +197,11 @@ class Ingredient
     sum = 0.0
     all_profits.each{ |num|  sum+=num}
     return sum.round(2)
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM ingredients where id = #{id}"
+    SqlRunner.run( sql )
   end
 
   def self.map_items(sql)

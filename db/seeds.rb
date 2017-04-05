@@ -9,17 +9,20 @@ Ingredient.delete_all()
 
 
 
-ingredient1 = Ingredient.new({'name' => 'Vodka', 'price_per_ltr' => 15.0, 'is_alcoholic' => true, 'quantity' => 5, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0})
+ingredient1 = Ingredient.new({'name' => 'Vodka', 'price_per_ltr' => 15.0, 'is_alcoholic' => true, 'quantity' => 5, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 0})
 ingredient1.save()
 
-ingredient2 = Ingredient.new({'name' => 'Peach Schnapps', 'price_per_ltr' => 7.50, 'is_alcoholic' => true, 'quantity' => 10, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0})
+ingredient2 = Ingredient.new({'name' => 'Peach Schnapps', 'price_per_ltr' => 7.50, 'is_alcoholic' => true, 'quantity' => 10, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 5})
 ingredient2.save()
 
-ingredient3 = Ingredient.new({'name' => 'Cranberry', 'price_per_ltr' => 1.98, 'is_alcoholic' => false, 'quantity' => 15, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0})
+ingredient3 = Ingredient.new({'name' => 'Cranberry', 'price_per_ltr' => 1.98, 'is_alcoholic' => false, 'quantity' => 15, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 7})
 ingredient3.save()
 
-ingredient4 = Ingredient.new({'name' => 'Orange', 'price_per_ltr' => 1.23, 'is_alcoholic' => false, 'quantity' => 15, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0})
+ingredient4 = Ingredient.new({'name' => 'Orange', 'price_per_ltr' => 1.23, 'is_alcoholic' => false, 'quantity' => 15, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 6})
 ingredient4.save()
+
+ingredient10 = Ingredient.new({'name' => 'Bombay Saphire', 'price_per_ltr' => 10.0, 'is_alcoholic' => true, 'quantity' => 10, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 10})
+ingredient10.save()
 
 # ingredient5 = Ingredient.new({})
 # ingredient5.save()

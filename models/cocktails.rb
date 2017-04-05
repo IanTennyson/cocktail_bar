@@ -32,6 +32,7 @@ class Cocktail
       IngredientList.map_items(sql)
   end
 
+#For every ingredient in the above method add
   def total_cost()
     total = 0
     for ingredient in ingredients()
