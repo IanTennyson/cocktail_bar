@@ -1,0 +1,34 @@
+body {
+  background: black url('/images/order_stock_background.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  
+  
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+h2 {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  font-family: Watchword Hairline Demo;
+  color: white;
+  background-color: black;
+  margin-top: 1px white;
+  border: solid 1px;
+}
+
+
+.form-div {
+  position: absolute;
+  top: 36%;
+  left: 30%;
+  width: 40%;
+  background-color: black;
+  font-family: Watchword Hairline Demo;
+  color: white;
+  padding: 15px;
+  border: 1px solid white;
+}

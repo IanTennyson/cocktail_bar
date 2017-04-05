@@ -1,40 +1,44 @@
-<h1>What would you like to order?</h1>
+<link rel="stylesheet" type="text/css" href="/styles/new_ingredient.css">
 
-<form action="/ingredients" method="post">
+<h2>Place order</h2>
 
-<label for="name">Ingredient Name: </label>
-<input type="name" type="text" name="name">
+  <div class="form-div">
+    <form action="/ingredients" method="post">
 
-<br/>
-<br/>
+    <label for="name">Ingredient Name: </label>
+    <input type="name" type="text" name="name">
 
-<label for="price_per_ltr">Price Per Ltr: </label>
-<input type="price_per_ltr" type="number" name="price_per_ltr">
+    <br/>
+    <br/>
 
-<br/>
-<br/>
+    <label for="price_per_ltr">Price Per Liter: </label>
+    <input type="price_per_ltr" type="number" name="price_per_ltr">
 
-<label for="is_alcoholic">Is the Ingredient Alcoholic?</label>
-<select id="is_alcoholic" name="is_alcoholic">
-<option value="t">Yes</option>
-<option value="f">No</option>
-</select>
+    <br/>
+    <br/>
 
-<br/>
-<br/>
+    <label for="is_alcoholic">Is the Ingredient Alcoholic?</label>
+    <select id="is_alcoholic" name="is_alcoholic">
+    <option value="t">Yes</option>
+    <option value="f">No</option>
+    </select>
 
-<label for="quantity">How many liters would you like to order?</label>
-<input id="quantity" type="number" name="quantity">
+    <br/>
+    <br/>
 
-<br/>
-<br/>
+    <label for="quantity">Number of liters:</label>
+    <input id="quantity" type="number" name="quantity">
+
+    <br/>
+    <br/>
 
 
-<label for="mark_up">What is the mark up on this product?</label>
-<input id="mark_up" type="number" name="mark_up">
+    <label for="mark_up">Mark up:</label>
+    <input id="mark_up" type="number" name="mark_up">
 
-<br/>
-<br/>
+    <br/>
+    <br/>
 
-<input class="btn btn--action" type='submit' value="Order">
-</form>
+    <input class="btn btn--action" type='submit' value="Order">
+    </form>
+  </div>

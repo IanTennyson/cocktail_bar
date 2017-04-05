@@ -2,7 +2,7 @@
   background-color: black;
   display: flex;
   flex-direction: column;
-  border: solid;
+  border: solid 5px black;
 }
 
 h1 {
