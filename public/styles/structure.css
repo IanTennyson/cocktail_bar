@@ -9,11 +9,11 @@ h1 {
   font-family: retrograph;
   color: white;
   text-align: center;
-  font-size: 30px
+  font-size: 30px;
 }
 
 .grid {
-  background-color: slategrey;
+  background-color: black;
 }
 
 .grid-row {
@@ -33,6 +33,18 @@ h1 {
 }
 
 .grid a {
+  font-family: Watchword Hairline Demo;
   display: inline-block;
+  color: white;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.grid a:hover {
+  color: black;
+  font-weight: bolder;
+  background-color: white;
+}
