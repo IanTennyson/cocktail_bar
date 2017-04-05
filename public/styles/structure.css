@@ -1,8 +1,14 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  
+}
+
 .header {
   background-color: black;
   display: flex;
   flex-direction: column;
-  border: solid 5px black;
+  border: solid 10px black;
 }
 
 h1 {
@@ -25,7 +31,7 @@ h1 {
   text-align: center;
   flex: 1;
   padding: 10px;
-  border: solid black;
+  border: solid;
 }
 
 .x {
@@ -47,4 +53,8 @@ a {
   color: black;
   font-weight: bolder;
   background-color: white;
+}
+
+nav {
+  background-color: black;
 }

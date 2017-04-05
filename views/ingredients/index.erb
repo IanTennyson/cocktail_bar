@@ -1,10 +1,14 @@
 <link rel="stylesheet" type="text/css" href="/styles/stock.css">
 
+<h2>In Stock</h2>
 
 <div class="table_1_2">
 <table class = "table1">
   <tr>
+  
+
     <th>Spirit</th>
+
     <th></th>
     <th>Price Per Ltr</th>
     <th></th>
@@ -17,8 +21,10 @@
     <th>Sale Price</th>
     <th></th>
     <th>Profit</th>
-    <hr/>
+    
+
   </tr>
+
   
   <% for alc_ing in @alc_ingredients %>
   
@@ -54,13 +60,17 @@
 
 
   <% end %>
+
   <tr>  
 
 
  
 </table>
   
+
   <hr/>
+  <hr/>
+
 
 <table class = "table2">
   <tr>
@@ -118,7 +128,7 @@
 </div>
 
 
-<hr/>
+
 
 
 <table class = "table3">
@@ -129,7 +139,7 @@
   <th></th>
   </tr>
   <td>£<%= @total_cost_price %></td>
-  <td>|</td>
+  <td></td>
   <td>£<%= @total_profit %></td>
 </table>
 
