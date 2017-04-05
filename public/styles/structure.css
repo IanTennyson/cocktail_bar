@@ -1,7 +1,7 @@
 .header {
   background-color: black;
-  width: 100%;
-  height: auto;
+  display: flex;
+  flex-direction: column;
   border: solid;
 }
 
@@ -13,19 +13,26 @@ h1 {
 }
 
 .grid {
-    background-color: grey;
-    
-    flex-direction: row;
-  }
+  background-color: slategrey;
+}
 
 .grid-row {
-    display: flex;
-    
-  }
+  display: flex;
+  flex-direction: column;
+}
 
 .grid-cell {
-    text-align: center;
-    flex: 1;
-    padding: 10px;
-    border: solid black 1px;
-  }
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+  border: solid;
+}
+
+.x {
+  flex-direction: row;
+}
+
+.grid a {
+  display: inline-block;
+}
+
