@@ -31,7 +31,9 @@ h1 {
   text-align: center;
   flex: 1;
   padding: 10px;
-  border: solid;
+  border-bottom: solid 1px white;
+  border-top: solid 1px white;
+
 }
 
 .x {

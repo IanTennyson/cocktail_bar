@@ -30,24 +30,46 @@ ingredient6.save()
 ingredient7 = Ingredient.new({'name' => 'Simple Syrup', 'price_per_ltr' => 6.70, 'is_alcoholic' => false, 'quantity' => 6, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 2})
 ingredient7.save()
 
-ingredient10 = Ingredient.new({'name' => 'Bombay Saphire', 'price_per_ltr' => 10.0, 'is_alcoholic' => true, 'quantity' => 10, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 10})
+ingredient8 = Ingredient.new({'name' => 'Bombay Saphire', 'price_per_ltr' => 10.0, 'is_alcoholic' => true, 'quantity' => 10, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 10})
+ingredient8.save()
+
+
+
+
+
+
+
+
+#ZOMBIE
+ingredient9 = Ingredient.new({'name' => 'White Rum', 'price_per_ltr' => 15.0, 'is_alcoholic' => true, 'quantity' => 10, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 2})
+ingredient9.save()
+
+ingredient10 = Ingredient.new({'name' => 'Apricot Brandy', 'price_per_ltr' => 20, 'is_alcoholic' => true, 'quantity' => 5, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 6})
 ingredient10.save()
 
-# ingredient5 = Ingredient.new({})
-# ingredient5.save()
+ingredient15 = Ingredient.new({'name' => 'Grenadine', 'price_per_ltr' => 5.71, 'is_alcoholic' => false, 'quantity' => 7, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 1})
+ingredient15.save()
 
-# ingredient6 = Ingredient.new({})
-# ingredient6.save()
+ingredient12 = Ingredient.new({'name' => 'Pineapple', 'price_per_ltr' => 1.23, 'is_alcoholic' => false, 'quantity' => 13, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 2})
+ingredient12.save()
 
-# ingredient7 = Ingredient.new({})
-# ingredient7.save()
+ingredient13 = Ingredient.new({'name' => 'Sweet & Sour', 'price_per_ltr' => 5.0, 'is_alcoholic' => false, 'quantity' => 6, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 2})
+ingredient13.save()
+
+ingredient14 = Ingredient.new({'name' => 'Overproof Rum', 'price_per_ltr' => 37.39, 'is_alcoholic' => true, 'quantity' => 10, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 7})
+ingredient14.save()
+
+ingredient11 = Ingredient.new({'name' => 'Dark Rum', 'price_per_ltr' => 28.6, 'is_alcoholic' => true, 'quantity' => 10, 'cost_price' => 0.0, 'sale_price' => 0.0, 'profit' => 0.0, 'mark_up' => 5})
+ingredient11.save()
+
+
 
 
 
 cocktail1 = Cocktail.new({'name' => 'Smoked Old Fashioned', 'prep_description' => 'Add your ingredients into a mixing glass and stir for several minutes. Fill karaf with smoke and strain in your old fashioned. Swirl and pour into a rocks glass with a large cube of ice. Garnish with an orange peel.'})
 cocktail1.save()
 
-cocktail2 = Cocktail.new({'name' => 'Woo Woo', 'prep_description' => 'Shake the three ingredients and serve over ice in a slim jim, garnish with a wedge of lime'})
+cocktail2 = Cocktail.new({'name' => 'Flaming Zombie', 'prep_description' => 'Fill your glass with ice and sink your grenadine. Add all your ingredients except the over proof rum into your shaker. Float the overproof rum on top and burn cinammon for garninsh.'})
 cocktail2.save()
 
 
@@ -63,15 +85,27 @@ ingredients_list3.save()
 
 
 
-#Woo Woo
-ingredients_list4 = IngredientList.new({'cocktail_id' => cocktail2.id, 'ingredient_id' => ingredient1.id, 'measure' => 25})
-ingredients_list4.save()
+#Flaming Zombie
+ingredients_list9 = IngredientList.new({'cocktail_id' => cocktail2.id, 'ingredient_id' => ingredient9.id, 'measure' => 15})
+ingredients_list9.save()
 
-ingredients_list5 = IngredientList.new({'cocktail_id' => cocktail2.id, 'ingredient_id' => ingredient2.id, 'measure' => 25})
-ingredients_list5.save()
+ingredients_list10 = IngredientList.new({'cocktail_id' => cocktail2.id, 'ingredient_id' => ingredient10.id, 'measure' => 15})
+ingredients_list10.save()
 
-ingredients_list6 = IngredientList.new({'cocktail_id' => cocktail2.id, 'ingredient_id' => ingredient3.id, 'measure' => 100})
-ingredients_list6.save()
+ingredients_list11 = IngredientList.new({'cocktail_id' => cocktail2.id, 'ingredient_id' => ingredient11.id, 'measure' => 15})
+ingredients_list11.save()
+
+ingredients_list12 = IngredientList.new({'cocktail_id' => cocktail2.id, 'ingredient_id' => ingredient12.id, 'measure' => 50})
+ingredients_list12.save()
+
+ingredients_list13 = IngredientList.new({'cocktail_id' => cocktail2.id, 'ingredient_id' => ingredient13.id, 'measure' => 50})
+ingredients_list13.save()
+
+ingredients_list14 = IngredientList.new({'cocktail_id' => cocktail2.id, 'ingredient_id' => ingredient14.id, 'measure' => 10})
+ingredients_list14.save()
+
+ingredients_list15 = IngredientList.new({'cocktail_id' => cocktail2.id, 'ingredient_id' => ingredient15.id, 'measure' => 10})
+ingredients_list15.save()
 
 
 
