@@ -7,12 +7,16 @@
   <h2><%= cocktail.name  %></h2>
 </div>
  
- <div class="trans">
+ <div class="repeat_img">
+ <div class="cocktail_img">
+ <p></p>
+ </div>
   <div class="cocktail">
 
 <!-- for every ingredient that returns when I call cocktail.ingredient -->
   <% for cocktail_ingredient in cocktail.ingredients() %>
   <!-- give me the name, here the .ingredients is refering to the ing_list -->
+
     <p><%= cocktail_ingredient.ingredients().name  %>: <%= cocktail_ingredient.measure  %>ml</p>
     <!-- give me the measure -->
     
@@ -35,8 +39,6 @@
   
 <% end %>
 
-<div class="cocktail_img">
-  
-</div>
+
 </div>
 

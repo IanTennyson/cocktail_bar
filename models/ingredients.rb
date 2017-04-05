@@ -69,7 +69,6 @@ class Ingredient
     SqlRunner.run(sql).first.values().pop.to_i
   end
 
-
   def ingredient_sale_price()
     sale_price = ingredient_cost_price() * ingredient_mark_up()
     one_percent = sale_price / 100
@@ -82,10 +81,6 @@ class Ingredient
   def update_sale_price(new_sale_price)
     sql = "UPDATE ingredients SET (sale_price) = (#{new_sale_price}) WHERE id = #{@id}"
     SqlRunner.run(sql)
-  end
-
-  def sale_inc_vat()
-
   end
 
   def ingredient_profit()
@@ -111,7 +106,7 @@ class Ingredient
     Ingredient.map_items(sql)
   end
 
-  def quantity_level
+  def quantity_level()
     quantity_no = quantity()
     if quantity_no >= 10
       return "High Stock Levels"
@@ -121,13 +116,6 @@ class Ingredient
       return "Low Stock Levels"
     end
   end
-
-
-
-
-
-
-
 
 
 
@@ -157,7 +145,6 @@ class Ingredient
     return Ingredient.new( results.first )
   end
 
-#Array of price per ltr ints
   def self.all_price_per_ltrs()
     sql = "SELECT price_per_ltr FROM ingredients"
     result = SqlRunner.run( sql ).values().flatten()
@@ -165,7 +152,6 @@ class Ingredient
     return ltr_price_array
   end
 
-#Array of quantity ints
   def self.all_quantities()
     sql = "SELECT quantity FROM ingredients"
     quantity_string_array = SqlRunner.run( sql ).values().flatten()
@@ -173,12 +159,10 @@ class Ingredient
     return quantity_array
   end
 
-#Array of price per ltr * quantity stored in ints
   def self.stock_cost_price_array()
     [all_price_per_ltrs(), all_quantities()].transpose.map {|a| a.inject(:*)}
   end
 
-#Total cost price of all stock stored in a int
   def self.total_stock_cost_price()
     sum = 0.0
     stock_cost_price_array.each{ |num|  sum+=num}
@@ -191,7 +175,6 @@ class Ingredient
     profit_array = profit_string_array.map{|string| string.to_f}
     return profit_array
   end
-#
 
   def self.total_potential_profit()
     sum = 0.0

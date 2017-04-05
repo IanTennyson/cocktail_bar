@@ -26,13 +26,11 @@ class Cocktail
     SqlRunner.run(sql)
   end
 
-#I want the ingredients from the ingredients_lists
   def ingredients()
     sql = "SELECT * FROM ingredients_lists WHERE cocktail_id = #{@id}"
       IngredientList.map_items(sql)
   end
 
-#For every ingredient in the above method add
   def total_cost()
     total = 0
     for ingredient in ingredients()
@@ -40,16 +38,6 @@ class Cocktail
     end
     return total.round(2)
   end
-
-
-
-
-
-
-  # def ingredients()
-  #   sql = "SELECT name FROM ingredients INNER JOIN ingredients_lists ON ingredients.id = ingredients_lists.ingredient_id WHERE ingredients_lists.cocktail_id = #{@id}"
-  #   SqlRunner.run(sql)
-  # end
 
   def names_measures()
     sql = "SELECT ing.name, measure FROM ingredients_lists ing_list INNER JOIN ingredients ing ON ing.id = ing_list.ingredient_id WHERE cocktail_id = #{@id}"
@@ -64,13 +52,7 @@ class Cocktail
     # FROM {TABLE} {A1}
     # INNER JOIN {TABLE} {A2} ON A1.{COLUMN} = A2.{COLUMN}
     # WHERE {WHAT}
-
   end
-
-
-
-
-
 
 
 
