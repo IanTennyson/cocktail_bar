@@ -1,3 +1,9 @@
+<link rel="stylesheet" type="text/css" href="/styles/new_ingredient.css">
+
+<h2>Update Stock</h2>
+
+<div class="form-div">
+
 <form method="post" action="/ingredients/<%= @ingredient.id %>">
   <label for="name">Ingredient Name:</label>
   <input id="name" type="text" name="name" value="<%= @ingredient.name %>">
@@ -36,3 +42,4 @@
   <input type="submit" value="Update Stock" />
 
 </form>
+</div>

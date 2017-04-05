@@ -1,0 +1,40 @@
+body {
+  
+}
+
+.table1 {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.table2 {
+  float: right;
+  width: 100%;
+  text-align: center;
+}
+
+.table3 {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+h2 {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  font-family: Watchword Hairline Demo;
+  color: white;
+  background-color: black;
+  margin-top: 1px white;
+  border: solid 1px;
+}
+
+th {
+  font-family: Watchword Hairline Demo;
+
+}
