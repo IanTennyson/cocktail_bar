@@ -13,6 +13,8 @@ get '/ingredients' do
   erb( :"ingredients/index" )
 end
 
+
+
 get '/ingredients/new' do
   @ingredients = Ingredient.all
   erb(:"ingredients/new")
@@ -26,12 +28,10 @@ end
 
 
 
-
 post '/ingredients/:id/delete' do
   Ingredient.delete(params[:id])
   redirect to("/ingredients")
 end
-
 
 
 
